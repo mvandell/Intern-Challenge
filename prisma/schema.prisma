@@ -1,0 +1,32 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+}
+
+model Drone{
+    image_id Int @id
+    timestamp DateTime
+    latitude String
+    longitude String
+    altitude_m Int
+    heading_deg Int
+    file_name String
+    camera_tilt_deg Int
+    focal_length_mm Int
+    iso Int
+    shutter_speed String
+    aperture String
+    color_temp_k Int
+    image_format String
+    file_size_mb Float
+    drone_speed_mps Float
+    battery_level_pct Int
+    gps_accuracy_m Float
+    gimbal_mode String
+    subject_detection String
+    image_tags String[]
+}
