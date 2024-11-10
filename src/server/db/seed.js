@@ -1,5 +1,5 @@
 const prisma = require("./client");
-//FIXME: fix import type
+
 async function seed() {
     console.log("Seeding the database");
     await prisma.drone.deleteMany();
