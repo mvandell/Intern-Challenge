@@ -9,7 +9,7 @@ datasource db {
 
 model Drone{
     image_id String @id
-    timestamp DateTime
+    timestamp String
     latitude String
     longitude String
     altitude_m Int
