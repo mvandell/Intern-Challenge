@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //Backend Routes
-
+app.use("/api", require("./api"));
 
 app.use((error, req, res, next) => {
   console.error('SERVER ERROR: ', error);
