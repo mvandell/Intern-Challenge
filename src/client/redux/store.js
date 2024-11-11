@@ -4,7 +4,7 @@ import { setupListeners } from '@reduxjs/toolkit/query';
 import defaultReducer from './defaultReducer';
 
 const store = configureStore({
-  reducer: defaultReducer,
+  reducer: defaultReducer, //FIXME: need a better reducer
   middleware: (getDefaultMiddleware) => {
     return getDefaultMiddleware().concat(api.middleware);
   },

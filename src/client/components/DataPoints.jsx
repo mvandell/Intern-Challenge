@@ -2,16 +2,16 @@ import { useGetAllQuery } from "../redux/api";
 
 const DataPoints = () => {
     const { data, error, isLoading } = useGetAllQuery();
-
+    console.log(data)
     if (isLoading) {
-        return <div> </div>;
+        return <> </>;
     }
     if (error) {
-        return <div>Error:{error.message}</div>;
+        return <>Error:{error.message}</>;
     }
 
     return (
-        <>
+        <tbody>
             {data && data.map((image) => (
                 <tr key={image.image_id}>
                     <td>
@@ -78,7 +78,7 @@ const DataPoints = () => {
                 </tr>
             ))
             }
-        </>
+        </tbody>
     )
 }
 export default DataPoints;
