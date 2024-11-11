@@ -17,3 +17,5 @@ apiRouter.get("/data", async (req, res, next) => {
     }
 });
 //GET SINGLE?
+
+module.exports = apiRouter;
